@@ -31,16 +31,20 @@ const Users = db.define(
         isEmail: true,
       },
     },
-    picture: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
     password: {
       type: DataTypes.STRING,
       allowNull: true,
       validate: {
         notEmpty: true,
       },
+    },
+    picture: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    bio: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     type_membership: {
       type: DataTypes.STRING,

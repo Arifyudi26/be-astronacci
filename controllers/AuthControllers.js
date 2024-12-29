@@ -103,9 +103,8 @@ export const RegisterFacebook = async (req, res) => {
   try {
     const { accessToken } = req.body;
 
-    if (!accessToken) {
+    if (!accessToken)
       return res.status(400).json({ message: "Access token is required" });
-    }
 
     const response = await axios.get(
       `https://graph.facebook.com/me?access_token=${accessToken}&fields=id,name,email,picture`
